@@ -1,0 +1,79 @@
+.footer
+    background: var(--primary-dark)
+    &__top
+        border-bottom: 2px solid #D5C9BE
+        border-top: 2px solid #D5C9BE
+        padding: 2.857rem 0
+    &-nav
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 4.857rem
+        &__item
+            font-style: italic
+            font-size: 20px
+            text-transform: uppercase
+            color: var(--light)
+    &__bottom
+        padding: 3.714rem 0
+    &__row
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 20px
+    &__col
+        display: flex
+        flex-direction: column
+    &__logo
+        color: var(--light)
+        font-family: 'Prata', serif
+        letter-spacing: 3%
+        font-size: 2.57rem
+        text-transform: uppercase
+        margin-bottom: 3.857rem
+    &__copy
+        font-size: 20px
+        color: var(--light)
+    &-links
+        display: flex
+        justify-content: center
+        gap: 2.286rem
+        flex-wrap: wrap
+        margin-bottom: 4.571rem
+        &__item
+            display: block
+            padding: 4px
+            border-radius: 50%
+            border: 1px solid transparent
+            transition: all 0.2s
+            &:hover
+                border-color: #D5C9BE
+    &__privacy
+        text-align: center
+    &__link
+        font-size: 20px
+        color: #D5C9BE
+    &__btn
+        width: 12.857rem
+        height: 5.571rem
+        margin-bottom: 2.714rem
+        margin-left: auto
+    &__terms
+        text-align: right
+
+@media screen and (max-width: 767px) 
+    .footer
+        &__row
+            grid-template-columns: repeat(2, 1fr) 
+            justify-content: center
+            grid-template-areas: 'col1 col3' 'col2 col2'
+        &__col
+            &:nth-child(1)
+                grid-area: col1
+                order: 1
+            &:nth-child(2)
+                grid-area: col2
+                order: 3
+            &:nth-child(3)
+                grid-area: col3
+                order: 2
+                
