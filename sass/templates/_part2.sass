@@ -1,0 +1,46 @@
+body
+    background: #000
+.content
+    position: relative
+    &__text
+        font-size: 100px
+        color: #fff
+        line-height: 1.5
+        transition: all 0.2s
+        .line
+            display: flex
+            flex-wrap: nowrap
+            white-space: nowrap
+            gap: 1rem
+            align-items: center
+        .video-wrapper
+            height: 1em
+            vertical-align: middle
+            position: relative
+            display: inline-flex
+            flex-grow: 1
+            overflow: hidden
+            width: 100%
+            z-index: 3
+            video
+                position: absolute
+                top: 0
+                left: 0
+                object-fit: cover
+    
+@media screen and (max-width: 1199px)
+    .content
+        &__text
+            font-size: 80px
+@media screen and (max-width: 991px)
+    .content
+        &__text
+            font-size: 60px
+@media screen and (max-width: 767px)
+    .content
+        &__text
+            font-size: 80px
+@media screen and (max-width: 575px)
+    .content
+        &__text
+            font-size: 60px
